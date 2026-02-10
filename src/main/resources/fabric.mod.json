@@ -12,7 +12,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/tutorialmod/icon.png",
+	"icon": "assets/tutorialmod/textures/item/pink_garnet",
 	"environment": "*",
 	"entrypoints": {
 		"main": [

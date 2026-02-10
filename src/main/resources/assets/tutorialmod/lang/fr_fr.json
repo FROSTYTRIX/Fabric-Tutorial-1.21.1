@@ -1,0 +1,25 @@
+{
+  "item.tutorialmod.pink_garnet": "Grenat rose",
+  "item.tutorialmod.raw_pink_garnet": "Grenat rose brut",
+  "item.tutorialmod.chisel": "Ciseau",
+  "item.tutorialmod.hammer": "Marteau",
+  "item.tutorialmod.cauliflower": "Chou-fleur",
+  "item.tutorialmod.starlight_ashes": "Cendres stellaires",
+
+  "block.tutorialmod.pink_garnet_ore": "Minerai de grenat rose",
+  "block.tutorialmod.pink_garnet_deepslate_ore": "Minerai de grenat rose des abîmes",
+  "block.tutorialmod.pink_garnet_block": "Bloc de grenat rose",
+  "block.tutorialmod.raw_pink_garnet_block": "Bloc de grenat rose brut",
+  "block.tutorialmod.magic_block": "Bloc magique",
+
+  "itemgroup.tutorialmod.pink_garnet_items": "Objets de Pink Garnet",
+  "itemgroup.tutorialmod.pink_garnet_blocks": "Blocs de Pink Garnet",
+
+  "tooltip.tutorialmod.magic_block.tooltip": "Ce bloc permet des §dTRANSMUTATIONS§r !!!",
+  "tooltip.tutorialmod.magic_block.tooltip2": "Les étoiles sont connues pour leur puissance incroyable...",
+
+  "tooltip.tutorialmod.chisel.shift_down": "Faites simplement un clic droit sur des objets, vous trouverez bien une utilité :)",
+  "tooltip.tutorialmod.chisel.havnt_shifted": "§7Appuyez sur [SHIFT] pour plus d'informations",
+
+  "tooltip.tutorialmod.starlight_ashes.tooltip": "Tout le monde sait que les étoiles restent chaudes pendant un moment... enfin voyons..."
+}
