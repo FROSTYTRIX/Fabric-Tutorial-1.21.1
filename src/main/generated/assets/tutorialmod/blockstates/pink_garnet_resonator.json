@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "charge=0": {
+      "model": "tutorialmod:block/pink_garnet_resonator"
+    },
+    "charge=1": {
+      "model": "tutorialmod:block/pink_garnet_resonator_charge1"
+    },
+    "charge=2": {
+      "model": "tutorialmod:block/pink_garnet_resonator_charge2"
+    },
+    "charge=3": {
+      "model": "tutorialmod:block/pink_garnet_resonator_charge3"
+    },
+    "charge=4": {
+      "model": "tutorialmod:block/pink_garnet_resonator_charge4"
+    }
+  }
+}

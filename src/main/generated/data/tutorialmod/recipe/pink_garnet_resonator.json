@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "tutorialmod:pink_garnet_block"
+    },
+    "R": {
+      "item": "tutorialmod:raw_pink_garnet"
+    },
+    "S": {
+      "item": "tutorialmod:starlight_ashes"
+    }
+  },
+  "pattern": [
+    "RSR",
+    "RSR",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:pink_garnet_resonator"
+  }
+}
