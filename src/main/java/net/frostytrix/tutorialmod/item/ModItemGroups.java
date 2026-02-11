@@ -48,9 +48,8 @@ public class ModItemGroups {
                         entries.add(new ItemStack(ModBlocks.PINK_GARNET_DOOR));
                         entries.add(new ItemStack(ModBlocks.PINK_GARNET_TRAPDOOR));
 
-
-
                         entries.add(new ItemStack(ModBlocks.MAGIC_BLOCK));
+                        entries.add(new ItemStack(ModBlocks.PINK_GARNET_RESONATOR));
                     }).build());
 
 

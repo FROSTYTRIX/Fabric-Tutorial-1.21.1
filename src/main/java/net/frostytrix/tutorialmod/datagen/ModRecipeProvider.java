@@ -78,5 +78,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.MAGIC_BLOCK)
                 .criterion(hasItem(ModBlocks.RAW_PINK_GARNET_BLOCK), conditionsFromItem(ModBlocks.RAW_PINK_GARNET_BLOCK))
                 .offerTo(recipeExporter, Identifier.of(TutorialMod.MOD_ID, "raw_ink_garnet_block_from_magic_block"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PINK_GARNET_RESONATOR)
+                .pattern("RSR")
+                .pattern("RSR")
+                .pattern("BBB")
+                .input('R', ModItems.RAW_PINK_GARNET)
+                .input('B', ModBlocks.PINK_GARNET_BLOCK)
+                .input('S', ModItems.STARLIGHT_ASHES)
+                .criterion(hasItem(ModItems.STARLIGHT_ASHES), conditionsFromItem(ModItems.STARLIGHT_ASHES))
+                .offerTo(recipeExporter);
     }
 }

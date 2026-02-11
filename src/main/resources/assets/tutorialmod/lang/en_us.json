@@ -13,6 +13,7 @@
   "block.tutorialmod.pink_garnet_block": "Pink Garnet Block",
   "block.tutorialmod.raw_pink_garnet_block": "Raw Pink Garnet Block",
   "block.tutorialmod.magic_block": "Magic Block",
+  "block.tutorialmod.pink_garnet_resonator": "Pink Garnet Resonator",
 
   "block.tutorialmod.pink_garnet_stairs": "Pink Garnet Stairs",
   "block.tutorialmod.pink_garnet_slab": "Pink Garnet Slab",
@@ -36,5 +37,7 @@
   "tooltip.tutorialmod.chisel.shift_down": "Just right click on stuff, you'll find a use :)",
   "tooltip.tutorialmod.chisel.havnt_shifted": "§7Press [SHIFT] for more information",
 
-  "tooltip.tutorialmod.starlight_ashes.tooltip": "Everyone knows stars stay hot for a while... duh..."
+  "tooltip.tutorialmod.starlight_ashes.tooltip": "Everyone knows stars stay hot for a while... duh...",
+
+  "tooltip.tutorialmod.chisel.coordinates": "Last Block Changed at : "
 }

@@ -3,6 +3,7 @@ package net.frostytrix.tutorialmod.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.frostytrix.tutorialmod.TutorialMod;
 import net.frostytrix.tutorialmod.block.custom.MagicBlock;
+import net.frostytrix.tutorialmod.block.custom.PinkGarnetResonatorBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -58,7 +59,8 @@ public class ModBlocks {
             new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().strength(4f).requiresTool().nonOpaque()));
 
 
-
+    public static final Block PINK_GARNET_RESONATOR = registerBlock("pink_garnet_resonator",
+            new PinkGarnetResonatorBlock(AbstractBlock.Settings.create().strength(6f).requiresTool().luminance(state -> state.get(PinkGarnetResonatorBlock.CHARGE) * 4)));
 
 
 

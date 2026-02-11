@@ -3,10 +3,10 @@ package net.frostytrix.tutorialmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.frostytrix.tutorialmod.block.ModBlocks;
+import net.frostytrix.tutorialmod.block.custom.PinkGarnetResonatorBlock;
 import net.frostytrix.tutorialmod.item.ModItems;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.data.client.*;
+import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -36,6 +36,35 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGIC_BLOCK);
+
+        var resonatorMap = BlockStateVariantMap.create(PinkGarnetResonatorBlock.CHARGE)
+                .register(0, BlockStateVariant.create().put(VariantSettings.MODEL,
+                        Models.CUBE_ALL.upload(ModBlocks.PINK_GARNET_RESONATOR,
+                                TextureMap.all(TextureMap.getId(ModBlocks.PINK_GARNET_RESONATOR)),
+                                blockStateModelGenerator.modelCollector)))
+                .register(1, BlockStateVariant.create().put(VariantSettings.MODEL,
+                        Models.CUBE_ALL.upload(ModBlocks.PINK_GARNET_RESONATOR, "_charge1",
+                                TextureMap.all(TextureMap.getId(ModBlocks.PINK_GARNET_RESONATOR).withSuffixedPath("_charge1")),
+                                blockStateModelGenerator.modelCollector)))
+                .register(2, BlockStateVariant.create().put(VariantSettings.MODEL,
+                        Models.CUBE_ALL.upload(ModBlocks.PINK_GARNET_RESONATOR, "_charge2",
+                                TextureMap.all(TextureMap.getId(ModBlocks.PINK_GARNET_RESONATOR).withSuffixedPath("_charge2")),
+                                blockStateModelGenerator.modelCollector)))
+                .register(3, BlockStateVariant.create().put(VariantSettings.MODEL,
+                        Models.CUBE_ALL.upload(ModBlocks.PINK_GARNET_RESONATOR, "_charge3",
+                                TextureMap.all(TextureMap.getId(ModBlocks.PINK_GARNET_RESONATOR).withSuffixedPath("_charge3")),
+                                blockStateModelGenerator.modelCollector)))
+                .register(4, BlockStateVariant.create().put(VariantSettings.MODEL,
+                        Models.CUBE_ALL.upload(ModBlocks.PINK_GARNET_RESONATOR, "_charge4",
+                                TextureMap.all(TextureMap.getId(ModBlocks.PINK_GARNET_RESONATOR).withSuffixedPath("_charge4")),
+                                blockStateModelGenerator.modelCollector)));
+
+        blockStateModelGenerator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(ModBlocks.PINK_GARNET_RESONATOR).coordinate(resonatorMap)
+        );
+
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.PINK_GARNET_RESONATOR,
+                ModelIds.getBlockSubModelId(ModBlocks.PINK_GARNET_RESONATOR, ""));
     }
 
     @Override
