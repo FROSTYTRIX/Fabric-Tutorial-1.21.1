@@ -7,6 +7,7 @@ import net.frostytrix.tutorialmod.item.ModItems;
 import net.frostytrix.tutorialmod.util.ModTags;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -22,5 +23,26 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.RAW_PINK_GARNET)
                 .add(Items.COAL)
                 ;
+
+        getOrCreateTagBuilder(ItemTags.SWORDS)
+                .add(ModItems.PINK_GARNET_SWORD)
+                ;
+
+        getOrCreateTagBuilder(ItemTags.PICKAXES)
+                .add(ModItems.PINK_GARNET_PICKAXE)
+        ;
+
+        getOrCreateTagBuilder(ItemTags.AXES)
+                .add(ModItems.PINK_GARNET_AXE)
+        ;
+
+        getOrCreateTagBuilder(ItemTags.SHOVELS)
+                .add(ModItems.PINK_GARNET_SHOVEL)
+        ;
+
+        getOrCreateTagBuilder(ItemTags.HOES)
+                .add(ModItems.PINK_GARNET_HOE)
+        ;
+
     }
 }

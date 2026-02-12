@@ -22,6 +22,12 @@ public class ModItemGroups {
                         entries.add(new ItemStack(ModItems.HAMMER));
                         entries.add(new ItemStack(ModItems.CAULIFLOWER));
                         entries.add(new ItemStack(ModItems.STARLIGHT_ASHES));
+                        entries.add(new ItemStack(ModItems.PINK_GARNET_SWORD));
+                        entries.add(new ItemStack(ModItems.PINK_GARNET_PICKAXE));
+                        entries.add(new ItemStack(ModItems.PINK_GARNET_AXE));
+                        entries.add(new ItemStack(ModItems.PINK_GARNET_SHOVEL));
+                        entries.add(new ItemStack(ModItems.PINK_GARNET_HOE));
+                        entries.add(new ItemStack(ModItems.PINK_GARNET_MINING_HAMMER));
                     }).build());
 
     public static final ItemGroup PINK_GARNET_BLOCKS = Registry.register(Registries.ITEM_GROUP,

@@ -9,6 +9,7 @@ import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
@@ -88,5 +89,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('S', ModItems.STARLIGHT_ASHES)
                 .criterion(hasItem(ModItems.STARLIGHT_ASHES), conditionsFromItem(ModItems.STARLIGHT_ASHES))
                 .offerTo(recipeExporter);
+
+        offerSwordRecipe(recipeExporter, RecipeCategory.COMBAT, ModItems.PINK_GARNET_SWORD, Items.STICK, ModItems.PINK_GARNET);
+        offerPickaxeRecipe(recipeExporter, RecipeCategory.COMBAT, ModItems.PINK_GARNET_PICKAXE, Items.STICK, ModItems.PINK_GARNET);
+        offerAxeRecipe(recipeExporter, RecipeCategory.COMBAT, ModItems.PINK_GARNET_AXE, Items.STICK, ModItems.PINK_GARNET);
+        offerShovelRecipe(recipeExporter, RecipeCategory.COMBAT, ModItems.PINK_GARNET_SHOVEL, Items.STICK, ModItems.PINK_GARNET);
+        offerHoeRecipe(recipeExporter, RecipeCategory.COMBAT, ModItems.PINK_GARNET_HOE, Items.STICK, ModItems.PINK_GARNET);
+    }
+
+    public void offerSwordRecipe(RecipeExporter recipeExporter, RecipeCategory category, ItemConvertible output, ItemConvertible stick, ItemConvertible material){
+        ShapedRecipeJsonBuilder.create(category, output).input('M', Ingredient.ofItems(material)).input('S', Ingredient.ofItems(stick)).pattern(" M ").pattern(" M ").pattern(" S ")
+                .criterion(hasItem(material), conditionsFromItem(material)).offerTo(recipeExporter);
+    }
+
+    public void offerPickaxeRecipe(RecipeExporter recipeExporter, RecipeCategory category, ItemConvertible output, ItemConvertible stick, ItemConvertible material){
+        ShapedRecipeJsonBuilder.create(category, output).input('M', Ingredient.ofItems(material)).input('S', Ingredient.ofItems(stick)).pattern("MMM").pattern(" S ").pattern(" S ")
+                .criterion(hasItem(material), conditionsFromItem(material)).offerTo(recipeExporter);
+    }
+
+    public void offerAxeRecipe(RecipeExporter recipeExporter, RecipeCategory category, ItemConvertible output, ItemConvertible stick, ItemConvertible material){
+        ShapedRecipeJsonBuilder.create(category, output).input('M', Ingredient.ofItems(material)).input('S', Ingredient.ofItems(stick)).pattern(" MM").pattern(" SM").pattern(" S ")
+                .criterion(hasItem(material), conditionsFromItem(material)).offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(category, output).input('M', Ingredient.ofItems(material)).input('S', Ingredient.ofItems(stick)).pattern("MM ").pattern("MS ").pattern(" S ")
+                .criterion(hasItem(material), conditionsFromItem(material)).offerTo(recipeExporter, Identifier.of(TutorialMod.MOD_ID, "recipe_axe_left"));
+    }
+
+    public void offerShovelRecipe(RecipeExporter recipeExporter, RecipeCategory category, ItemConvertible output, ItemConvertible stick, ItemConvertible material){
+        ShapedRecipeJsonBuilder.create(category, output).input('M', Ingredient.ofItems(material)).input('S', Ingredient.ofItems(stick)).pattern(" M ").pattern(" S ").pattern(" S ")
+                .criterion(hasItem(material), conditionsFromItem(material)).offerTo(recipeExporter);
+    }
+
+    public void offerHoeRecipe(RecipeExporter recipeExporter, RecipeCategory category, ItemConvertible output, ItemConvertible stick, ItemConvertible material){
+        ShapedRecipeJsonBuilder.create(category, output).input('M', Ingredient.ofItems(material)).input('S', Ingredient.ofItems(stick)).pattern(" MM").pattern(" S ").pattern(" S ")
+                .criterion(hasItem(material), conditionsFromItem(material)).offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(category, output).input('M', Ingredient.ofItems(material)).input('S', Ingredient.ofItems(stick)).pattern("MM ").pattern(" S ").pattern(" S ")
+                .criterion(hasItem(material), conditionsFromItem(material)).offerTo(recipeExporter, Identifier.of(TutorialMod.MOD_ID, "recipe_hoe_left"));
     }
 }
