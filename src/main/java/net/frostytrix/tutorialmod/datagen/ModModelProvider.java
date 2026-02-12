@@ -6,7 +6,6 @@ import net.frostytrix.tutorialmod.block.ModBlocks;
 import net.frostytrix.tutorialmod.block.custom.PinkGarnetResonatorBlock;
 import net.frostytrix.tutorialmod.item.ModItems;
 import net.minecraft.data.client.*;
-import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {

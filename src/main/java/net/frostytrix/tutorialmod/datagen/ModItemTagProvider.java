@@ -2,7 +2,6 @@ package net.frostytrix.tutorialmod.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.frostytrix.tutorialmod.block.ModBlocks;
 import net.frostytrix.tutorialmod.item.ModItems;
 import net.frostytrix.tutorialmod.util.ModTags;
 import net.minecraft.item.Items;

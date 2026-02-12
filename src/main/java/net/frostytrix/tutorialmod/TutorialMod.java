@@ -1,7 +1,6 @@
 package net.frostytrix.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.frostytrix.tutorialmod.block.ModBlocks;

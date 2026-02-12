@@ -1,7 +1,6 @@
 package net.frostytrix.tutorialmod.item.custom;
 
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;

@@ -2,7 +2,6 @@ package net.frostytrix.tutorialmod.item.custom;
 
 import net.frostytrix.tutorialmod.component.ModDataComponentTypes;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.EquipmentSlot;
@@ -16,12 +15,10 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Stack;
 
 public class ChiselItem extends Item {
     private static final Map<Block, Block> CHISEL_MAP =
@@ -65,9 +62,9 @@ public class ChiselItem extends Item {
             tooltip.add(Text.translatable("tooltip.tutorialmod.chisel.shift_down"));
             if (stack.get(ModDataComponentTypes.COORDINATES) != null) {
                 tooltip.add(Text.translatable("tooltip.tutorialmod.chisel.coordinates"));
-                tooltip.add(Text.literal("X:" + String.valueOf(stack.get(ModDataComponentTypes.COORDINATES).getX())
-                        + " Y:" + String.valueOf(stack.get(ModDataComponentTypes.COORDINATES).getY()
-                        + " Z:" + String.valueOf(stack.get(ModDataComponentTypes.COORDINATES).getZ()))));
+                tooltip.add(Text.of(Text.literal("X:" + stack.get(ModDataComponentTypes.COORDINATES).getX())
+                        + " Y:" + stack.get(ModDataComponentTypes.COORDINATES).getY()
+                        + " Z:" + stack.get(ModDataComponentTypes.COORDINATES).getZ()));
             }
         } else {
             tooltip.add(Text.translatable("tooltip.tutorialmod.chisel.havnt_shifted"));
