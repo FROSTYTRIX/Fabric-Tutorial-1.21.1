@@ -28,6 +28,10 @@ public class ModItemGroups {
                         entries.add(new ItemStack(ModItems.PINK_GARNET_SHOVEL));
                         entries.add(new ItemStack(ModItems.PINK_GARNET_HOE));
                         entries.add(new ItemStack(ModItems.PINK_GARNET_MINING_HAMMER));
+                        entries.add(new ItemStack(ModItems.PINK_GARNET_HELMET));
+                        entries.add(new ItemStack(ModItems.PINK_GARNET_CHESTPLATE));
+                        entries.add(new ItemStack(ModItems.PINK_GARNET_LEGGINGS));
+                        entries.add(new ItemStack(ModItems.PINK_GARNET_BOOTS));
                     }).build());
 
     public static final ItemGroup PINK_GARNET_BLOCKS = Registry.register(Registries.ITEM_GROUP,
