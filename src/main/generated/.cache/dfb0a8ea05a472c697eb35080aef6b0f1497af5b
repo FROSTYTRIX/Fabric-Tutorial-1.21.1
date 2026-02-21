@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-13T17:47:45.06341146	Tutorial Mod/Recipes
+// 1.21.1	2026-02-16T15:07:07.339817036	Tutorial Mod/Recipes
 c0f125622a7c54753b7a3677f51d64f86227d5de data/tutorialmod/advancement/recipes/misc/pink_garnet_from_smelting_pink_garnet_ore.json
 338d4ab77ca8995ea074850b4b17bfaad5fdb2d5 data/tutorialmod/recipe/pink_garnet_resonator.json
 c79d12e827c0d70eb658be2e92848740069dc4cb data/tutorialmod/recipe/pink_garnet_hoe.json
@@ -16,6 +16,7 @@ b144410462aae6d5752dde6053b6d1a5be665d90 data/tutorialmod/advancement/recipes/mi
 ea96f1aae366d37ddc0b9fb2cb7d606b4c758393 data/tutorialmod/advancement/recipes/building_blocks/pink_garnet.json
 3dafe4238303707d61f20b64afad5ee7d0c868c5 data/tutorialmod/advancement/recipes/redstone/pink_garnet_door.json
 95b9ee52d2ec06de107755bc79f8b8e6dac21f63 data/tutorialmod/recipe/pink_garnet_fence_gate.json
+6175e380ba7632fc2691e96162620e03f5f4bfda data/tutorialmod/advancement/recipes/misc/frost.json
 d080f86841f39d7fe7376f3965a1ba158b444ede data/tutorialmod/recipe/pink_garnet_slab.json
 153c6b4a5155b2f2d819d43e1c10d0762c94d7cc data/tutorialmod/advancement/recipes/redstone/pink_garnet_button.json
 b04e1c0e5c77287f459aee8652f3f1a2f08ad704 data/tutorialmod/advancement/recipes/combat/pink_garnet_axe.json
@@ -24,6 +25,7 @@ b04e1c0e5c77287f459aee8652f3f1a2f08ad704 data/tutorialmod/advancement/recipes/co
 058b5dc5744c819aa77ffe1b711001fb9dec821d data/tutorialmod/recipe/pink_garnet_door.json
 338342fb055ede1ef2b72128e8b780496fc53abd data/tutorialmod/advancement/recipes/misc/raw_pink_garnet_block.json
 02d7f3739e325432e0a86745b7ac9aba41a5f80c data/tutorialmod/recipe/pink_garnet_from_blasting_raw_pink_garnet.json
+7b8f51870e369cab9e05d7a0ce0384adf0220b92 data/tutorialmod/recipe/frost.json
 dd966893c44885ab0a5de3c8a885e2e907229604 data/tutorialmod/advancement/recipes/misc/pink_garnet_from_blasting_pink_garnet_ore.json
 969fef35a46abd34ba6bd5fef061f4bbebac9d8b data/tutorialmod/advancement/recipes/misc/pink_garnet_from_smelting_raw_pink_garnet.json
 76b486febd89af09d952fd04bb0b196baf77a605 data/tutorialmod/recipe/raw_pink_garnet.json

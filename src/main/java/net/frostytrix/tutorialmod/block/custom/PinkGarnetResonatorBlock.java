@@ -7,6 +7,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.ActionResult;
@@ -30,9 +32,11 @@ public class PinkGarnetResonatorBlock extends Block {
 
         if (!world.isClient) {
             if (entity instanceof PlayerEntity player) {
-                if (currentCharge > 0 && player.getStatusEffect(StatusEffects.SPEED) == null) {
+                if (currentCharge > 0 && (player.getStatusEffect(StatusEffects.SPEED) == null || player.getStatusEffect(StatusEffects.HASTE) == null)) {
                     world.setBlockState(pos, state.with(CHARGE, currentCharge - 1), Block.NOTIFY_LISTENERS);
-                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 400, 1));
+                    world.playSound(null, pos, SoundEvents.BLOCK_BEACON_ACTIVATE, SoundCategory.BLOCKS);
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 60 * 20, 2));
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 60 * 20, 1));
                 }
             }
         }
@@ -46,6 +50,7 @@ public class PinkGarnetResonatorBlock extends Block {
         if (!world.isClient) {
             if (currentCharge < maxCharge && player.getMainHandStack().getItem() == ModItems.PINK_GARNET) {
                 world.setBlockState(pos, state.with(CHARGE, currentCharge + 1), Block.NOTIFY_LISTENERS);
+                world.playSound(null, pos, SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE, SoundCategory.BLOCKS);
                 player.getMainHandStack().decrement(1);
             }
 

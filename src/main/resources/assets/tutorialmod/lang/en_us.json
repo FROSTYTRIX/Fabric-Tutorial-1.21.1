@@ -13,6 +13,7 @@
   "item.tutorialmod.pink_garnet_hoe": "Pink Garnet Hoe",
 
   "item.tutorialmod.pink_garnet_mining_hammer": "Pink Garnet Mining Hammer",
+  "item.tutorialmod.frost_bow": "Frost Bow",
 
   "item.tutorialmod.pink_garnet_helmet": "Pink Garnet Helmet",
   "item.tutorialmod.pink_garnet_chestplate": "Pink Garnet Chestplate",
@@ -54,5 +55,9 @@
 
   "tooltip.tutorialmod.starlight_ashes.tooltip": "Everyone knows stars stay hot for a while... duh...",
 
-  "tooltip.tutorialmod.chisel.coordinates": "Last Block Changed at : "
+  "tooltip.tutorialmod.chisel.coordinates": "Last Block Changed at : ",
+
+  "item.tutorialmod.frost_trim_smithing_template": "Frost Smithing Template",
+  "trim_material.tutorialmod.pink_garnet": "Pink Garnet Material",
+  "trim_pattern.tutorialmod.frost": "Frost Armor Template"
 }

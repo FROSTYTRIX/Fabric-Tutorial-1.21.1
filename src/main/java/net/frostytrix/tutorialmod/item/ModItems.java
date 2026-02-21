@@ -3,12 +3,14 @@ package net.frostytrix.tutorialmod.item;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.frostytrix.tutorialmod.TutorialMod;
 import net.frostytrix.tutorialmod.item.custom.ChiselItem;
+import net.frostytrix.tutorialmod.item.custom.ModArmorItem;
 import net.frostytrix.tutorialmod.item.custom.miningHammerItem;
 import net.frostytrix.tutorialmod.item.custom.thorHammerItem;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
@@ -58,7 +60,7 @@ public class ModItems{
             new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
     public static final Item PINK_GARNET_CHESTPLATE = registerItem("pink_garnet_chestplate",
-            new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+            new ModArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
                     .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(15))));
     public static final Item PINK_GARNET_LEGGINGS = registerItem("pink_garnet_leggings",
             new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
@@ -67,6 +69,11 @@ public class ModItems{
             new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
 
+    public static final Item FROST_SMITHING_TEMPLATE = registerItem("frost_trim_smithing_template",
+            SmithingTemplateItem.of(Identifier.of(TutorialMod.MOD_ID, "frost"), FeatureFlags.VANILLA));
+
+    public static final Item FROST_BOW = registerItem("frost_bow",
+            new BowItem(new Item.Settings().maxDamage(1800)));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);

@@ -95,6 +95,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerAxeRecipe(recipeExporter, RecipeCategory.COMBAT, ModItems.PINK_GARNET_AXE, Items.STICK, ModItems.PINK_GARNET);
         offerShovelRecipe(recipeExporter, RecipeCategory.COMBAT, ModItems.PINK_GARNET_SHOVEL, Items.STICK, ModItems.PINK_GARNET);
         offerHoeRecipe(recipeExporter, RecipeCategory.COMBAT, ModItems.PINK_GARNET_HOE, Items.STICK, ModItems.PINK_GARNET);
+
+        offerSmithingTrimRecipe(recipeExporter, ModItems.FROST_SMITHING_TEMPLATE, Identifier.of(TutorialMod.MOD_ID, "frost"));
     }
 
     public void offerSwordRecipe(RecipeExporter recipeExporter, RecipeCategory category, ItemConvertible output, ItemConvertible stick, ItemConvertible material){

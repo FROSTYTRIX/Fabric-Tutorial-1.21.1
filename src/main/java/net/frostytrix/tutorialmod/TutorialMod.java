@@ -25,6 +25,7 @@ public class TutorialMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 20000);
+		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 300);
 
 		ModDataComponentTypes.registerDataComponents();
 
